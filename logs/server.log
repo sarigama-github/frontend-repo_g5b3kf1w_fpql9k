@@ -3,22 +3,22 @@
 > vite
 
 
-  VITE v5.4.20  ready in 208 ms
+  VITE v5.4.20  ready in 222 ms
 
   ➜  Local:   http://localhost:3000/
   ➜  Network: http://172.20.42.80:3000/
-1:50:07 PM [vite] Pre-transform error: Transform failed with 1 error:
-/home/workspace/src/components/FX.jsx:30:146: ERROR: Expected identifier after "http:" in namespaced JSX name
-1:50:08 PM [vite] Internal server error: Transform failed with 1 error:
-/home/workspace/src/components/FX.jsx:30:146: ERROR: Expected identifier after "http:" in namespaced JSX name
+1:52:16 PM [vite] Pre-transform error: Transform failed with 1 error:
+/home/workspace/src/components/FX.jsx:30:116: ERROR: Expected ">" but found "svg"
+1:52:17 PM [vite] Internal server error: Transform failed with 1 error:
+/home/workspace/src/components/FX.jsx:30:116: ERROR: Expected ">" but found "svg"
   Plugin: vite:esbuild
-  File: /home/workspace/src/components/FX.jsx:30:146
+  File: /home/workspace/src/components/FX.jsx:30:116
   
-  Expected identifier after "http:" in namespaced JSX name
+  Expected ">" but found "svg"
   28 |  
-  29 |        {/* Grain overlay */}
-  30 |        <div className="pointer-events-none fixed -z-10 inset-0 opacity-[0.08] mix-blend-overlay bg-[url('data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><filter id=\"n\"><feTurbulence type=\"fractalNoise\" baseFrequency=\"0.65\" numOctaves=\"2\" stitchTiles=\"stitch\"/></filter><rect width=\"100%\" height=\"100%\" filter=\"url(%23n)\"/></svg>')]" />
-     |                                                                                                                                                    ^
+  29 |        {/* Grain overlay - encoded data URI to avoid JSX parsing issues */}
+  30 |        <div className="pointer-events-none fixed -z-10 inset-0 opacity-[0.08] mix-blend-overlay bg-[url(\"data:image/svg+xml;utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3Cfilter%20id='n'%3E%3CfeTurbulence%20type='fractalNoise'%20baseFrequency='0.65'%20numOctaves='2'%20stitchTiles='stitch'/%3E%3C/filter%3E%3Crect%20width='100%25'%20height='100%25'%20filter='url(%23n)'/%3E%3C/svg%3E\")]" />
+     |                                                                                                                      ^
   31 |      </>
   32 |    )
   
@@ -32,16 +32,16 @@
       at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
       at Readable.push (node:internal/streams/readable:390:5)
       at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
-1:50:08 PM [vite] Internal server error: Transform failed with 1 error:
-/home/workspace/src/components/FX.jsx:30:146: ERROR: Expected identifier after "http:" in namespaced JSX name
+1:52:17 PM [vite] Internal server error: Transform failed with 1 error:
+/home/workspace/src/components/FX.jsx:30:116: ERROR: Expected ">" but found "svg"
   Plugin: vite:esbuild
-  File: /home/workspace/src/components/FX.jsx:30:146
+  File: /home/workspace/src/components/FX.jsx:30:116
   
-  Expected identifier after "http:" in namespaced JSX name
+  Expected ">" but found "svg"
   28 |  
-  29 |        {/* Grain overlay */}
-  30 |        <div className="pointer-events-none fixed -z-10 inset-0 opacity-[0.08] mix-blend-overlay bg-[url('data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><filter id=\"n\"><feTurbulence type=\"fractalNoise\" baseFrequency=\"0.65\" numOctaves=\"2\" stitchTiles=\"stitch\"/></filter><rect width=\"100%\" height=\"100%\" filter=\"url(%23n)\"/></svg>')]" />
-     |                                                                                                                                                    ^
+  29 |        {/* Grain overlay - encoded data URI to avoid JSX parsing issues */}
+  30 |        <div className="pointer-events-none fixed -z-10 inset-0 opacity-[0.08] mix-blend-overlay bg-[url(\"data:image/svg+xml;utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3Cfilter%20id='n'%3E%3CfeTurbulence%20type='fractalNoise'%20baseFrequency='0.65'%20numOctaves='2'%20stitchTiles='stitch'/%3E%3C/filter%3E%3Crect%20width='100%25'%20height='100%25'%20filter='url(%23n)'/%3E%3C/svg%3E\")]" />
+     |                                                                                                                      ^
   31 |      </>
   32 |    )
   
@@ -55,62 +55,16 @@
       at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
       at Readable.push (node:internal/streams/readable:390:5)
       at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
-1:50:37 PM [vite] Internal server error: Transform failed with 1 error:
-/home/workspace/src/components/FX.jsx:30:146: ERROR: Expected identifier after "http:" in namespaced JSX name
+1:52:21 PM [vite] Internal server error: Transform failed with 1 error:
+/home/workspace/src/components/FX.jsx:30:116: ERROR: Expected ">" but found "svg"
   Plugin: vite:esbuild
-  File: /home/workspace/src/components/FX.jsx:30:146
+  File: /home/workspace/src/components/FX.jsx:30:116
   
-  Expected identifier after "http:" in namespaced JSX name
+  Expected ">" but found "svg"
   28 |  
-  29 |        {/* Grain overlay */}
-  30 |        <div className="pointer-events-none fixed -z-10 inset-0 opacity-[0.08] mix-blend-overlay bg-[url('data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><filter id=\"n\"><feTurbulence type=\"fractalNoise\" baseFrequency=\"0.65\" numOctaves=\"2\" stitchTiles=\"stitch\"/></filter><rect width=\"100%\" height=\"100%\" filter=\"url(%23n)\"/></svg>')]" />
-     |                                                                                                                                                    ^
-  31 |      </>
-  32 |    )
-  
-      at failureErrorWithLog (/home/workspace/node_modules/esbuild/lib/main.js:1472:15)
-      at /home/workspace/node_modules/esbuild/lib/main.js:755:50
-      at responseCallbacks.<computed> (/home/workspace/node_modules/esbuild/lib/main.js:622:9)
-      at handleIncomingPacket (/home/workspace/node_modules/esbuild/lib/main.js:677:12)
-      at Socket.readFromStdout (/home/workspace/node_modules/esbuild/lib/main.js:600:7)
-      at Socket.emit (node:events:508:28)
-      at addChunk (node:internal/streams/readable:559:12)
-      at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
-      at Readable.push (node:internal/streams/readable:390:5)
-      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
-1:50:52 PM [vite] Internal server error: Transform failed with 1 error:
-/home/workspace/src/components/FX.jsx:30:146: ERROR: Expected identifier after "http:" in namespaced JSX name
-  Plugin: vite:esbuild
-  File: /home/workspace/src/components/FX.jsx:30:146
-  
-  Expected identifier after "http:" in namespaced JSX name
-  28 |  
-  29 |        {/* Grain overlay */}
-  30 |        <div className="pointer-events-none fixed -z-10 inset-0 opacity-[0.08] mix-blend-overlay bg-[url('data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><filter id=\"n\"><feTurbulence type=\"fractalNoise\" baseFrequency=\"0.65\" numOctaves=\"2\" stitchTiles=\"stitch\"/></filter><rect width=\"100%\" height=\"100%\" filter=\"url(%23n)\"/></svg>')]" />
-     |                                                                                                                                                    ^
-  31 |      </>
-  32 |    )
-  
-      at failureErrorWithLog (/home/workspace/node_modules/esbuild/lib/main.js:1472:15)
-      at /home/workspace/node_modules/esbuild/lib/main.js:755:50
-      at responseCallbacks.<computed> (/home/workspace/node_modules/esbuild/lib/main.js:622:9)
-      at handleIncomingPacket (/home/workspace/node_modules/esbuild/lib/main.js:677:12)
-      at Socket.readFromStdout (/home/workspace/node_modules/esbuild/lib/main.js:600:7)
-      at Socket.emit (node:events:508:28)
-      at addChunk (node:internal/streams/readable:559:12)
-      at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
-      at Readable.push (node:internal/streams/readable:390:5)
-      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
-1:51:07 PM [vite] Internal server error: Transform failed with 1 error:
-/home/workspace/src/components/FX.jsx:30:146: ERROR: Expected identifier after "http:" in namespaced JSX name
-  Plugin: vite:esbuild
-  File: /home/workspace/src/components/FX.jsx:30:146
-  
-  Expected identifier after "http:" in namespaced JSX name
-  28 |  
-  29 |        {/* Grain overlay */}
-  30 |        <div className="pointer-events-none fixed -z-10 inset-0 opacity-[0.08] mix-blend-overlay bg-[url('data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><filter id=\"n\"><feTurbulence type=\"fractalNoise\" baseFrequency=\"0.65\" numOctaves=\"2\" stitchTiles=\"stitch\"/></filter><rect width=\"100%\" height=\"100%\" filter=\"url(%23n)\"/></svg>')]" />
-     |                                                                                                                                                    ^
+  29 |        {/* Grain overlay - encoded data URI to avoid JSX parsing issues */}
+  30 |        <div className="pointer-events-none fixed -z-10 inset-0 opacity-[0.08] mix-blend-overlay bg-[url(\"data:image/svg+xml;utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3Cfilter%20id='n'%3E%3CfeTurbulence%20type='fractalNoise'%20baseFrequency='0.65'%20numOctaves='2'%20stitchTiles='stitch'/%3E%3C/filter%3E%3Crect%20width='100%25'%20height='100%25'%20filter='url(%23n)'/%3E%3C/svg%3E\")]" />
+     |                                                                                                                      ^
   31 |      </>
   32 |    )
   
