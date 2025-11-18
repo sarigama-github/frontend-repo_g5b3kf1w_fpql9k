@@ -1,5 +1,9 @@
 import React from 'react'
 
+const grainDataUrl = "data:image/svg+xml;utf8," + encodeURIComponent(
+  "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(#n)'/></svg>"
+)
+
 export default function FX() {
   return (
     <>
@@ -26,8 +30,11 @@ export default function FX() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(148,163,184,0.18)_1px,transparent_1px)] bg-[length:24px_24px]" />
       </div>
 
-      {/* Grain overlay - encoded data URI to avoid JSX parsing issues */}
-      <div className="pointer-events-none fixed -z-10 inset-0 opacity-[0.08] mix-blend-overlay bg-[url(\"data:image/svg+xml;utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3Cfilter%20id='n'%3E%3CfeTurbulence%20type='fractalNoise'%20baseFrequency='0.65'%20numOctaves='2'%20stitchTiles='stitch'/%3E%3C/filter%3E%3Crect%20width='100%25'%20height='100%25'%20filter='url(%23n)'/%3E%3C/svg%3E\")]" />
+      {/* Grain overlay - use style backgroundImage to avoid JSX/Tailwind parser issues */}
+      <div
+        className="pointer-events-none fixed -z-10 inset-0 opacity-[0.08] mix-blend-overlay"
+        style={{ backgroundImage: `url(${grainDataUrl})` }}
+      />
     </>
   )
 }
