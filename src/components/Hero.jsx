@@ -1,13 +1,18 @@
 import React from 'react'
 import Spline from '@splinetool/react-spline'
 import { motion } from 'framer-motion'
+import Particles from './Particles'
 
 export default function Hero() {
   return (
     <section className="relative overflow-hidden">
+      {/* 3D scene */}
       <div className="absolute inset-0">
         <Spline scene="https://prod.spline.design/4cHQr84zOGAHOehh/scene.splinecode" style={{ width: '100%', height: '100%' }} />
       </div>
+
+      {/* Floating particles */}
+      <Particles count={60} />
 
       <div className="relative z-10 mx-auto max-w-7xl px-6 pt-28 pb-32 lg:pt-32 lg:pb-40">
         <div className="grid lg:grid-cols-12 gap-10 items-center">
@@ -29,7 +34,8 @@ export default function Hero() {
             </p>
 
             <div className="mt-8 flex flex-wrap items-center gap-3">
-              <a href="#pricing" className="inline-flex items-center gap-2 rounded-xl bg-sky-200 text-slate-900 px-5 py-3 font-medium shadow-[0_10px_30px_rgba(125,211,252,0.25)] hover:bg-white transition-colors">
+              <a href="#pricing" className="group relative inline-flex items-center gap-2 rounded-xl bg-sky-200 text-slate-900 px-5 py-3 font-medium shadow-[0_10px_30px_rgba(125,211,252,0.25)] hover:bg-white transition-colors">
+                <span className="absolute inset-0 -z-10 rounded-xl bg-gradient-to-r from-sky-200 to-white opacity-0 group-hover:opacity-30 blur-xl transition" />
                 Start free trial
               </a>
               <a href="#how" className="inline-flex items-center gap-2 rounded-xl border border-white/10 bg-white/5 px-5 py-3 text-white/90 hover:bg-white/10 transition-colors">
@@ -58,6 +64,8 @@ export default function Hero() {
                   <p className="text-white text-2xl font-medium tracking-tight">Smart SMS follow‑ups</p>
                 </div>
               </div>
+              {/* Animated border sheen */}
+              <span className="pointer-events-none absolute -inset-[1px] rounded-[calc(theme(borderRadius.3xl)+1px)] bg-[linear-gradient(90deg,rgba(125,211,252,0.0),rgba(125,211,252,0.35),rgba(125,211,252,0.0))] [mask:linear-gradient(#000_0_0)_content-box,linear-gradient(#000_0_0)] [mask-composite:exclude] p-px animate-[sheen_3s_linear_infinite]" />
             </div>
           </motion.div>
         </div>
